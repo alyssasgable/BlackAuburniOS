@@ -1,0 +1,58 @@
+PODS:
+  - Alamofire (4.6.0)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - DZNEmptyDataSet (1.8.1)
+  - FontAwesomeKit/Core (2.2.1)
+  - FontAwesomeKit/FoundationIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FSCalendar (2.7.9)
+  - MGSwipeTableCell (1.6.6)
+  - PKRevealController (2.0.6)
+  - REFormattedNumberField (1.1.6)
+  - RETableViewManager (1.7):
+    - REFormattedNumberField (~> 1.1.5)
+    - REValidation (~> 0.1.4)
+  - REValidation (0.1.4)
+  - SlackTextViewController (1.9.6)
+  - SnapKit (4.0.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (4.0.0)
+  - TextFieldEffects (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6)
+  - ChameleonFramework
+  - DZNEmptyDataSet
+  - FontAwesomeKit/FoundationIcons
+  - FSCalendar
+  - MGSwipeTableCell
+  - PKRevealController
+  - RETableViewManager (~> 1.6)
+  - SlackTextViewController
+  - SnapKit (~> 4.0.0)
+  - SVProgressHUD
+  - SwiftyJSON
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  MGSwipeTableCell: c3bc6e261e7bc06c112909fe3fb8205de286082c
+  PKRevealController: ffb45a16f5a5032ad90a3d16e5cbb0d8e035bd58
+  REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
+  RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
+  REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
+  SlackTextViewController: b854e62c1c156336bc4fd409c6ca79b5773e8f9d
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+
+PODFILE CHECKSUM: 2b2824185c2a21a846c1a91fd77e449d14280b32
+
+COCOAPODS: 1.4.0
