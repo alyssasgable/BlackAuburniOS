@@ -21,6 +21,7 @@ pod 'MGSwipeTableCell'
 pod 'SwiftyJSON'
 pod 'FSCalendar'
 pod 'PopupDialog', '~> 0.7'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 
 
   

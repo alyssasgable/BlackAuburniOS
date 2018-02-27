@@ -12,12 +12,13 @@ import PopupDialog
 import SnapKit
 import TextFieldEffects
 
-
 class ViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +28,21 @@ class ViewController: UIViewController {
         setUpView()
     }
     
-    
+    var email = JiroTextField()
+    var logoView = UIImageView()
     
     func setUpView() {
         
         let logo = UIImage(named: "logo")
-        let logoView = UIImageView(image: logo)
+        logoView = UIImageView(image: logo)
         view.addSubview(logoView)
+        
+        email.borderColor = UIColor.white
+        email.placeholder = "Email"
+        email.placeholderColor = UIColor.white
+        addDoneButtonOnKeyboard(textfield: email)
+        email.isHidden = true
+        view.addSubview(email)
         
         let username = JiroTextField()
         username.borderColor = UIColor.white
@@ -56,6 +65,13 @@ class ViewController: UIViewController {
         submitButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         self.view.addSubview(submitButton)
         
+        let signUpButton = UIButton()
+        signUpButton.setTitle("Sign Up", for: .normal)
+        signUpButton.setTitleColor(UIColor.black, for: .normal)
+        signUpButton.backgroundColor = .white
+        signUpButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
+        self.view.addSubview(signUpButton)
+        
         logoView.snp.makeConstraints { (make) in
             make.width.height.equalTo(200)
             make.left.equalTo(75)
@@ -63,15 +79,21 @@ class ViewController: UIViewController {
             make.top.equalToSuperview().offset(30)
         }
         
-        username.snp.makeConstraints { (make) in
+        email.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().inset(10)
             make.height.equalTo(50)
             make.top.equalTo(logoView.snp.bottom)
         }
         
+        username.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview().inset(10)
+            make.height.equalTo(50)
+            make.top.equalTo(email.snp.bottom).offset(15)
+        }
+        
         password.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().inset(10)
-            make.top.equalTo(username.snp.bottom)
+            make.top.equalTo(username.snp.bottom).offset(15)
             make.height.equalTo(50)
             make.width.equalTo(100)
         }
@@ -82,7 +104,18 @@ class ViewController: UIViewController {
             make.height.equalTo(50)
         }
         
+        signUpButton.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview().inset(10)
+            make.top.equalTo(submitButton.snp.bottom).offset(25)
+            make.height.equalTo(50)
+        }
         
+        
+    }
+    
+    @objc func signUp(_: UITextField) {
+        email.animateViewsForTextEntry()
+        email.isHidden = false
     }
     
     @objc func login() {
