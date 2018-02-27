@@ -6,10 +6,12 @@
 //  Copyright © 2018 AlyssaGable. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import PopupDialog
 import SnapKit
 import TextFieldEffects
+
 
 class ViewController: UIViewController {
     
@@ -37,12 +39,14 @@ class ViewController: UIViewController {
         username.borderColor = UIColor.white
         username.placeholder = "Username"
         username.placeholderColor = UIColor.white
+        addDoneButtonOnKeyboard(textfield: username)
         view.addSubview(username)
         
         let password = JiroTextField()
         password.borderColor = UIColor.white
         password.placeholder = "Password"
         password.placeholderColor = UIColor.white
+        addDoneButtonOnKeyboard(textfield: password)
         view.addSubview(password)
         
         let submitButton = UIButton()
@@ -93,6 +97,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+     func addDoneButtonOnKeyboard(textfield: UITextField)
+    {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20))
+        doneToolbar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        textfield.inputAccessoryView = doneToolbar
+    }
+    
+    @objc func doneButtonAction()
+    {
+        self.view.endEditing(true)
+    }
 
 }
+
+
 
