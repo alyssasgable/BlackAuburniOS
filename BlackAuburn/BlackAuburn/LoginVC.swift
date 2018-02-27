@@ -14,17 +14,25 @@ import TextFieldEffects
 
 class LoginVC: UIViewController {
     
-    //sets status bar to white
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-    }
+//    //sets status bar to white
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return UIStatusBarStyle.lightContent
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
        view.backgroundColor = UIColor.black
+       self.navigationController?.setNavigationBarHidden(true, animated: true)
         setUpView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     var email = JiroTextField()
@@ -122,7 +130,8 @@ class LoginVC: UIViewController {
     
     //Handles logging in
     @objc func login() {
-        
+        let homeScreen = HomeVC()
+        self.navigationController?.pushViewController(homeScreen, animated: true)
     }
     override func viewDidAppear(_ animated: Bool) {
     
