@@ -20,6 +20,8 @@ pod 'SnapKit', '~> 4.0.0'
 pod 'MGSwipeTableCell'
 pod 'SwiftyJSON'
 pod 'FSCalendar'
+pod 'PopupDialog', '~> 0.7'
+
 
   
 post_install do |installer|
