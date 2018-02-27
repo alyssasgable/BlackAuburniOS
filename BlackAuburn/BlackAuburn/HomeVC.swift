@@ -24,10 +24,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         self.view.backgroundColor = .white
         self.navigationItem.hidesBackButton = true
         
-        
+        //sets up collection view
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .white
+        collectionView.showsHorizontalScrollIndicator = false
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
@@ -41,7 +42,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         setUpView()
     }
-    
+    //reloads collection view everytime the view appears
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
     }
@@ -60,8 +61,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         }
     }
     
-//Collection View
-
+//Collection View Controller functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
