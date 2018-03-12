@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295F1384205254FB00C04DED /* DrawerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F1383205254FB00C04DED /* DrawerMenu.swift */; };
 		297E283C20453AD900E23C54 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E283B20453AD900E23C54 /* HomeVC.swift */; };
 		2999B5FC204220EB00D4AB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999B5FB204220EB00D4AB8C /* AppDelegate.swift */; };
 		2999B5FE204220EB00D4AB8C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999B5FD204220EB00D4AB8C /* LoginVC.swift */; };
@@ -15,6 +16,7 @@
 		2999B606204220EB00D4AB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2999B604204220EB00D4AB8C /* LaunchScreen.storyboard */; };
 		2999B611204220EB00D4AB8C /* BlackAuburnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999B610204220EB00D4AB8C /* BlackAuburnTests.swift */; };
 		2999B61C204220EC00D4AB8C /* BlackAuburnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999B61B204220EC00D4AB8C /* BlackAuburnUITests.swift */; };
+		29BC8403204656F400C27D80 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8402204656F400C27D80 /* HomeTableViewCell.swift */; };
 		29F6B46A2045B76E004CBC06 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */; };
 		36AF491855FE7C786BAFCFFF /* Pods_BlackAuburn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF141F3D457BB2E858FE07C /* Pods_BlackAuburn.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		256676D440260235A4950590 /* Pods-BlackAuburn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackAuburn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlackAuburn/Pods-BlackAuburn.debug.xcconfig"; sourceTree = "<group>"; };
+		295F1383205254FB00C04DED /* DrawerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenu.swift; sourceTree = "<group>"; };
 		297E283B20453AD900E23C54 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2999B5F8204220EB00D4AB8C /* BlackAuburn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackAuburn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2999B5FB204220EB00D4AB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		2999B617204220EB00D4AB8C /* BlackAuburnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackAuburnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2999B61B204220EC00D4AB8C /* BlackAuburnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackAuburnUITests.swift; sourceTree = "<group>"; };
 		2999B61D204220EC00D4AB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29BC8402204656F400C27D80 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EF141F3D457BB2E858FE07C /* Pods_BlackAuburn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackAuburn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11608D88FF27B553DD3777F /* Pods-BlackAuburn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackAuburn.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlackAuburn/Pods-BlackAuburn.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,11 +124,13 @@
 				2999B5FB204220EB00D4AB8C /* AppDelegate.swift */,
 				2999B5FD204220EB00D4AB8C /* LoginVC.swift */,
 				297E283B20453AD900E23C54 /* HomeVC.swift */,
+				295F1383205254FB00C04DED /* DrawerMenu.swift */,
 				2999B5FF204220EB00D4AB8C /* Main.storyboard */,
 				2999B602204220EB00D4AB8C /* Assets.xcassets */,
 				2999B604204220EB00D4AB8C /* LaunchScreen.storyboard */,
 				2999B607204220EB00D4AB8C /* Info.plist */,
 				29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */,
+				29BC8402204656F400C27D80 /* HomeTableViewCell.swift */,
 			);
 			path = BlackAuburn;
 			sourceTree = "<group>";
@@ -302,12 +308,9 @@
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
-				"${BUILT_PRODUCTS_DIR}/PKRevealController/PKRevealController.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
-				"${BUILT_PRODUCTS_DIR}/REFormattedNumberField/REFormattedNumberField.framework",
-				"${BUILT_PRODUCTS_DIR}/RETableViewManager/RETableViewManager.framework",
-				"${BUILT_PRODUCTS_DIR}/REValidation/REValidation.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SlackTextViewController/SlackTextViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
@@ -323,12 +326,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKRevealController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/REFormattedNumberField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RETableViewManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/REValidation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlackTextViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
@@ -381,7 +381,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				297E283C20453AD900E23C54 /* HomeVC.swift in Sources */,
+				29BC8403204656F400C27D80 /* HomeTableViewCell.swift in Sources */,
 				2999B5FE204220EB00D4AB8C /* LoginVC.swift in Sources */,
+				295F1384205254FB00C04DED /* DrawerMenu.swift in Sources */,
 				2999B5FC204220EB00D4AB8C /* AppDelegate.swift in Sources */,
 				29F6B46A2045B76E004CBC06 /* HomeCollectionViewCell.swift in Sources */,
 			);

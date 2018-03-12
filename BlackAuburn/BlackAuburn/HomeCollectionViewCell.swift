@@ -10,7 +10,7 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     let title: UILabel = {
-        $0.textColor = UIColor.black
+        $0.textColor = UIColor.white
         $0.textAlignment = .center
         $0.numberOfLines = 0
         $0.lineBreakMode = .byWordWrapping
@@ -24,6 +24,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    let cardView = UIView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -36,10 +38,15 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     
     func setupCell() {
+       
+        image.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        image.layer.shadowOffset = CGSize(width: 0, height: 0)
+        image.layer.shadowOpacity = 0.9
         
+        addSubview(cardView)
         addSubview(image)
         addSubview(title)
-    
+        
         image.snp.remakeConstraints { (make) in
             make.top.equalToSuperview().offset(5)
             make.height.equalTo(150)
@@ -47,8 +54,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
         }
         
         title.snp.remakeConstraints { (make) in
-            make.left.equalToSuperview().offset(55)
+            make.left.equalToSuperview().offset(60)
             make.top.equalTo(image.snp.bottom).offset(5)
+            
         }
         
     }

@@ -10,14 +10,9 @@ PODS:
     - FontAwesomeKit/Core
   - FSCalendar (2.7.9)
   - MGSwipeTableCell (1.6.6)
-  - PKRevealController (2.0.6)
   - PopupDialog (0.7.1):
     - DynamicBlurView (~> 2.0)
-  - REFormattedNumberField (1.1.6)
-  - RETableViewManager (1.7):
-    - REFormattedNumberField (~> 1.1.5)
-    - REValidation (~> 0.1.4)
-  - REValidation (0.1.4)
+  - SideMenu (3.1.5)
   - SlackTextViewController (1.9.6)
   - SnapKit (4.0.0)
   - Spring (1.0.5)
@@ -32,9 +27,8 @@ DEPENDENCIES:
   - FontAwesomeKit/FoundationIcons
   - FSCalendar
   - MGSwipeTableCell
-  - PKRevealController
   - PopupDialog (~> 0.7)
-  - RETableViewManager (~> 1.6)
+  - SideMenu
   - SlackTextViewController
   - SnapKit (~> 4.0.0)
   - Spring (from `https://github.com/MengTo/Spring.git`)
@@ -59,11 +53,8 @@ SPEC CHECKSUMS:
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   MGSwipeTableCell: c3bc6e261e7bc06c112909fe3fb8205de286082c
-  PKRevealController: ffb45a16f5a5032ad90a3d16e5cbb0d8e035bd58
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
-  REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
-  RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
-  REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
+  SideMenu: 47dbf9e4d878062d8994aed43f6e4bf6c1fea30b
   SlackTextViewController: b854e62c1c156336bc4fd409c6ca79b5773e8f9d
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Spring: 48aad470f3ead043b2da98b64e0bf0630b7ebc42
@@ -71,6 +62,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: 1968638fac426979278d2520fe2374f0fce74cb7
+PODFILE CHECKSUM: ffa372e35949ea118961571f5c92d9ff82f44e87
 
 COCOAPODS: 1.4.0
