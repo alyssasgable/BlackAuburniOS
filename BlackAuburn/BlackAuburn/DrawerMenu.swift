@@ -45,11 +45,15 @@ class DrawerMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuButtonIdentifier", for: indexPath) as! DrawerCell
 
         cell.menuButton.setTitle(menuButtons[indexPath.row]["title"], for: .normal)
-//        cell.menuButton.addTarget(self, action: nil, for: .touchUpInside)
+        cell.menuButton.addTarget(self, action: Selector("goToCalendar"), for: .touchUpInside)
 
         return cell
     }
+ 
     
+    @objc func goToCalendar() {
+        self.navigationController?.pushViewController(CalendarVC(), animated: true)
+    }
 }
 
 import UIKit

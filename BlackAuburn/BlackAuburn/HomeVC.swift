@@ -106,25 +106,26 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         let leftButton = UIButton(frame:CGRect(x: 0, y: 0, width: 40, height: 40))
         let background = UIImageView(image: UIImage(named: "logo"))
-        background.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        background.frame = CGRect(x: 0, y: 0, width: 40, height: 35)
         leftButton.addSubview(background)
         self.navigationController?.navigationBar.addSubview(leftButton)
         
         leftButton.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
-            make.left.equalToSuperview().offset(10)
+            make.left.equalToSuperview().offset(15)
             make.height.equalTo(50)
         }
     }
     func setUpView() {
         collectionView.backgroundColor = UIColor.clear
+        
         self.view.addSubview(collectionView)
         tableView.backgroundColor = UIColor.clear
         self.view.addSubview(tableView)
         
         collectionView.snp.makeConstraints { (make) in
             make.left.right.top.equalToSuperview()
-            make.height.equalTo(230)
+            make.height.equalTo(270)
         }
         
         tableView.snp.makeConstraints { (make) in

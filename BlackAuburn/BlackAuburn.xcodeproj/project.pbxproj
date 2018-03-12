@@ -17,6 +17,7 @@
 		2999B611204220EB00D4AB8C /* BlackAuburnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999B610204220EB00D4AB8C /* BlackAuburnTests.swift */; };
 		2999B61C204220EC00D4AB8C /* BlackAuburnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999B61B204220EC00D4AB8C /* BlackAuburnUITests.swift */; };
 		29BC8403204656F400C27D80 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8402204656F400C27D80 /* HomeTableViewCell.swift */; };
+		29CEF4DA2056EFE100228744 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF4D92056EFE100228744 /* CalendarVC.swift */; };
 		29F6B46A2045B76E004CBC06 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */; };
 		36AF491855FE7C786BAFCFFF /* Pods_BlackAuburn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF141F3D457BB2E858FE07C /* Pods_BlackAuburn.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		2999B61B204220EC00D4AB8C /* BlackAuburnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackAuburnUITests.swift; sourceTree = "<group>"; };
 		2999B61D204220EC00D4AB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29BC8402204656F400C27D80 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		29CEF4D92056EFE100228744 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EF141F3D457BB2E858FE07C /* Pods_BlackAuburn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackAuburn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11608D88FF27B553DD3777F /* Pods-BlackAuburn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackAuburn.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlackAuburn/Pods-BlackAuburn.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,16 +123,17 @@
 		2999B5FA204220EB00D4AB8C /* BlackAuburn */ = {
 			isa = PBXGroup;
 			children = (
+				29CEF4D62056EFBD00228744 /* Calendar */,
 				2999B5FB204220EB00D4AB8C /* AppDelegate.swift */,
 				2999B5FD204220EB00D4AB8C /* LoginVC.swift */,
 				297E283B20453AD900E23C54 /* HomeVC.swift */,
+				29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */,
+				29BC8402204656F400C27D80 /* HomeTableViewCell.swift */,
 				295F1383205254FB00C04DED /* DrawerMenu.swift */,
 				2999B5FF204220EB00D4AB8C /* Main.storyboard */,
 				2999B602204220EB00D4AB8C /* Assets.xcassets */,
 				2999B604204220EB00D4AB8C /* LaunchScreen.storyboard */,
 				2999B607204220EB00D4AB8C /* Info.plist */,
-				29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */,
-				29BC8402204656F400C27D80 /* HomeTableViewCell.swift */,
 			);
 			path = BlackAuburn;
 			sourceTree = "<group>";
@@ -151,6 +154,14 @@
 				2999B61D204220EC00D4AB8C /* Info.plist */,
 			);
 			path = BlackAuburnUITests;
+			sourceTree = "<group>";
+		};
+		29CEF4D62056EFBD00228744 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				29CEF4D92056EFE100228744 /* CalendarVC.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		F2F621BF771E8AEABC3883C3 /* Frameworks */ = {
@@ -384,6 +395,7 @@
 				29BC8403204656F400C27D80 /* HomeTableViewCell.swift in Sources */,
 				2999B5FE204220EB00D4AB8C /* LoginVC.swift in Sources */,
 				295F1384205254FB00C04DED /* DrawerMenu.swift in Sources */,
+				29CEF4DA2056EFE100228744 /* CalendarVC.swift in Sources */,
 				2999B5FC204220EB00D4AB8C /* AppDelegate.swift in Sources */,
 				29F6B46A2045B76E004CBC06 /* HomeCollectionViewCell.swift in Sources */,
 			);

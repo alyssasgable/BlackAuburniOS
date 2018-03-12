@@ -48,7 +48,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         addSubview(title)
         
         image.snp.remakeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(30)
             make.height.equalTo(150)
             make.width.equalTo(150)
         }
