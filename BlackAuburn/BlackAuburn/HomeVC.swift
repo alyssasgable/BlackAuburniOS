@@ -53,9 +53,17 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: tableIdentifier)
         
+        //left menu
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: DrawerMenu())
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
+        
+        //right menu
         let menuRightNavigationController = UISideMenuNavigationController(rootViewController: DrawerMenu())
         SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
 
+        //adds gestures
+        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
 
         setUpView()
     }
@@ -128,7 +136,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 }
     
     @objc func showDrawer() {
-        present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
+        present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
 
     }
     
