@@ -37,7 +37,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
-            layout.sectionInset = UIEdgeInsets(top: 5, left: 2, bottom: 5, right: 2)
+            layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
             layout.itemSize = CGSize(width: 175, height: 200)
             layout.minimumInteritemSpacing = 0
             layout.minimumLineSpacing = 0
@@ -47,7 +47,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         //sets up table view
         tableView.delegate = self
         tableView.dataSource = self
-//        tableView.estimatedRowHeight = 120.0
         tableView.backgroundColor = UIColor.white
         tableView.separatorStyle = .none
         
@@ -118,9 +117,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     func setUpView() {
         collectionView.backgroundColor = UIColor.clear
-        
         self.view.addSubview(collectionView)
+        
         tableView.backgroundColor = UIColor.clear
+        tableView.estimatedRowHeight = 120.0
         self.view.addSubview(tableView)
         
         collectionView.snp.makeConstraints { (make) in

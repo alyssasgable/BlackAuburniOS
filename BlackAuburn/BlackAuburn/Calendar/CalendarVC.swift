@@ -11,7 +11,7 @@ import SnapKit
 import FSCalendar
 import Koyomi
 
-class CalendarVC: UIViewController {
+class CalendarVC: UIViewController, KoyomiDelegate, UICollectionViewDelegate{
     
     var monthLabel = UILabel()
     var calendar = Koyomi(frame: CGRect(x: 10, y : 20, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2), sectionSpace: 1.5, cellSpace: 0.5, inset: .zero, weekCellHeight: 25)
@@ -28,6 +28,7 @@ class CalendarVC: UIViewController {
         swipeLeft.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(swipeLeft)
         
+        
         setUpView()
     }
     
@@ -38,6 +39,7 @@ class CalendarVC: UIViewController {
         
         calendar = Koyomi(frame: CGRect(x: 10, y : 20, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2), sectionSpace: 1.5, cellSpace: 0.5, inset: .zero, weekCellHeight: 25)
         calendar.selectionMode = .multiple(style: .background)
+        calendar.delegate = self
         view.addSubview(calendar)
         
         monthLabel.snp.makeConstraints { (make) in
@@ -47,7 +49,7 @@ class CalendarVC: UIViewController {
         
         calendar.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
-            make.height.equalTo(UIScreen.main.bounds.height/2)
+            make.height.equalTo(UIScreen.main.bounds.height/3)
             make.top.equalTo(monthLabel.snp.bottom)
         }
     }
@@ -70,6 +72,7 @@ class CalendarVC: UIViewController {
             }
         }
     }
-  
+    
+    
     
 }
