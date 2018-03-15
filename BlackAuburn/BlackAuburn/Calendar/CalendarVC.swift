@@ -20,6 +20,8 @@ class CalendarVC: UIViewController, KoyomiDelegate, UICollectionViewDelegate{
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
+        calendar.delegate = self
+
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
         swipeRight.direction = UISwipeGestureRecognizerDirection.right
         self.view.addGestureRecognizer(swipeRight)
@@ -39,7 +41,6 @@ class CalendarVC: UIViewController, KoyomiDelegate, UICollectionViewDelegate{
         
         calendar = Koyomi(frame: CGRect(x: 10, y : 20, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2), sectionSpace: 1.5, cellSpace: 0.5, inset: .zero, weekCellHeight: 25)
         calendar.selectionMode = .multiple(style: .background)
-        calendar.delegate = self
         view.addSubview(calendar)
         
         monthLabel.snp.makeConstraints { (make) in
@@ -49,7 +50,7 @@ class CalendarVC: UIViewController, KoyomiDelegate, UICollectionViewDelegate{
         
         calendar.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
-            make.height.equalTo(UIScreen.main.bounds.height/3)
+            make.height.equalTo(UIScreen.main.bounds.height/2)
             make.top.equalTo(monthLabel.snp.bottom)
         }
     }
