@@ -9,6 +9,8 @@ PODS:
   - FontAwesomeKit/FoundationIcons (2.2.1):
     - FontAwesomeKit/Core
   - FSCalendar (2.7.9)
+  - JTAppleCalendar (7.1.5)
+  - Koyomi (1.2.7)
   - MGSwipeTableCell (1.6.6)
   - PopupDialog (0.7.1):
     - DynamicBlurView (~> 2.0)
@@ -26,6 +28,8 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - FontAwesomeKit/FoundationIcons
   - FSCalendar
+  - JTAppleCalendar (~> 7.0)
+  - Koyomi
   - MGSwipeTableCell
   - PopupDialog (~> 0.7)
   - SideMenu
@@ -52,6 +56,8 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+  Koyomi: f03615b8d2bb5a5a4752c6404a9794ed7ef7b327
   MGSwipeTableCell: c3bc6e261e7bc06c112909fe3fb8205de286082c
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
   SideMenu: 47dbf9e4d878062d8994aed43f6e4bf6c1fea30b
@@ -62,6 +68,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: ffa372e35949ea118961571f5c92d9ff82f44e87
+PODFILE CHECKSUM: 507c12bb37862d197336d36bcd125a67732229f7
 
 COCOAPODS: 1.4.0

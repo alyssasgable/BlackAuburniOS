@@ -21,6 +21,9 @@ pod 'SwiftyJSON'
 pod 'FSCalendar'
 pod 'PopupDialog', '~> 0.7'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+pod 'Koyomi'
+pod 'JTAppleCalendar', '~> 7.0'
+
 
 
   
