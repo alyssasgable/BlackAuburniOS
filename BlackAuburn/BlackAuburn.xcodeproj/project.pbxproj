@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29016A73205E224E001BBE2F /* DirectoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29016A72205E224E001BBE2F /* DirectoryVC.swift */; };
+		29016A75205E22AC001BBE2F /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29016A74205E22AC001BBE2F /* DirectoryTableViewCell.swift */; };
 		295F1384205254FB00C04DED /* DrawerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F1383205254FB00C04DED /* DrawerMenu.swift */; };
 		297E283C20453AD900E23C54 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E283B20453AD900E23C54 /* HomeVC.swift */; };
 		2999B5FC204220EB00D4AB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2999B5FB204220EB00D4AB8C /* AppDelegate.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		256676D440260235A4950590 /* Pods-BlackAuburn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackAuburn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlackAuburn/Pods-BlackAuburn.debug.xcconfig"; sourceTree = "<group>"; };
+		29016A72205E224E001BBE2F /* DirectoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryVC.swift; sourceTree = "<group>"; };
+		29016A74205E22AC001BBE2F /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
 		295F1383205254FB00C04DED /* DrawerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenu.swift; sourceTree = "<group>"; };
 		297E283B20453AD900E23C54 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2999B5F8204220EB00D4AB8C /* BlackAuburn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackAuburn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		29016A6C205E1D8C001BBE2F /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				29016A72205E224E001BBE2F /* DirectoryVC.swift */,
+				29016A74205E22AC001BBE2F /* DirectoryTableViewCell.swift */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
 		2999B5EF204220EB00D4AB8C = {
 			isa = PBXGroup;
 			children = (
@@ -123,13 +136,12 @@
 		2999B5FA204220EB00D4AB8C /* BlackAuburn */ = {
 			isa = PBXGroup;
 			children = (
-				29CEF4D62056EFBD00228744 /* Calendar */,
 				2999B5FB204220EB00D4AB8C /* AppDelegate.swift */,
-				2999B5FD204220EB00D4AB8C /* LoginVC.swift */,
-				297E283B20453AD900E23C54 /* HomeVC.swift */,
-				29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */,
-				29BC8402204656F400C27D80 /* HomeTableViewCell.swift */,
-				295F1383205254FB00C04DED /* DrawerMenu.swift */,
+				29FED41C205EBF8E00F3CF9F /* Drawer */,
+				29FED41B205EBEF500F3CF9F /* Login */,
+				29FED41A205EBEE200F3CF9F /* Home */,
+				29CEF4D62056EFBD00228744 /* Calendar */,
+				29016A6C205E1D8C001BBE2F /* Directory */,
 				2999B5FF204220EB00D4AB8C /* Main.storyboard */,
 				2999B602204220EB00D4AB8C /* Assets.xcassets */,
 				2999B604204220EB00D4AB8C /* LaunchScreen.storyboard */,
@@ -162,6 +174,32 @@
 				29CEF4D92056EFE100228744 /* CalendarVC.swift */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		29FED41A205EBEE200F3CF9F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				297E283B20453AD900E23C54 /* HomeVC.swift */,
+				29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */,
+				29BC8402204656F400C27D80 /* HomeTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		29FED41B205EBEF500F3CF9F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2999B5FD204220EB00D4AB8C /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		29FED41C205EBF8E00F3CF9F /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				295F1383205254FB00C04DED /* DrawerMenu.swift */,
+			);
+			path = Drawer;
 			sourceTree = "<group>";
 		};
 		F2F621BF771E8AEABC3883C3 /* Frameworks */ = {
@@ -397,7 +435,9 @@
 			files = (
 				297E283C20453AD900E23C54 /* HomeVC.swift in Sources */,
 				29BC8403204656F400C27D80 /* HomeTableViewCell.swift in Sources */,
+				29016A73205E224E001BBE2F /* DirectoryVC.swift in Sources */,
 				2999B5FE204220EB00D4AB8C /* LoginVC.swift in Sources */,
+				29016A75205E22AC001BBE2F /* DirectoryTableViewCell.swift in Sources */,
 				295F1384205254FB00C04DED /* DrawerMenu.swift in Sources */,
 				29CEF4DA2056EFE100228744 /* CalendarVC.swift in Sources */,
 				2999B5FC204220EB00D4AB8C /* AppDelegate.swift in Sources */,

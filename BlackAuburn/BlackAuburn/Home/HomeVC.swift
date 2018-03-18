@@ -179,6 +179,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         cell.dateLabel.text = post["date"]
         cell.descriptionLabel.text = post["description"]
         
+        cell.postImage.image = UIImage(named: "test")
+        
         return cell
     }
     

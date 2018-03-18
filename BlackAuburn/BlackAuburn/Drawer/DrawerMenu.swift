@@ -11,7 +11,7 @@ import SnapKit
 
 class DrawerMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var menuButtons = [["title":"Calendar", "selector":"goToCalendar"]]
+    var menuButtons = [["title":"Calendar", "selector":"goToCalendar"], ["title":"Directory", "selector":"goToDirectory"]]
         
 //        ["Calendar", "Directory", "Organizations", "Moves", "Study Resources", "Black Plainsmen", "Memes", "Blogs", "Settings"]
 
@@ -46,7 +46,7 @@ class DrawerMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuButtonIdentifier", for: indexPath) as! DrawerCell
 
         cell.menuButton.setTitle(menuButtons[indexPath.row]["title"], for: .normal)
-        cell.menuButton.addTarget(self, action: Selector("goToCalendar"), for: .touchUpInside)
+        cell.menuButton.addTarget(self, action: Selector(menuButtons[indexPath.row]["selector"]!), for: .touchUpInside)
 
         return cell
     }
@@ -54,6 +54,9 @@ class DrawerMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func goToCalendar() {
         self.navigationController?.pushViewController(CalendarVC(), animated: true)
+    }
+    @objc func goToDirectory() {
+        self.navigationController?.pushViewController(DirectoryVC(), animated: true)
     }
 }
 
