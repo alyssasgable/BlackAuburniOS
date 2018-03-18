@@ -21,6 +21,8 @@
 		29BC8403204656F400C27D80 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC8402204656F400C27D80 /* HomeTableViewCell.swift */; };
 		29CEF4DA2056EFE100228744 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CEF4D92056EFE100228744 /* CalendarVC.swift */; };
 		29F6B46A2045B76E004CBC06 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */; };
+		29FED41F205EE9FB00F3CF9F /* OrgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED41E205EE9FB00F3CF9F /* OrgVC.swift */; };
+		29FED421205EEA1700F3CF9F /* OrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED420205EEA1700F3CF9F /* OrgTableViewCell.swift */; };
 		36AF491855FE7C786BAFCFFF /* Pods_BlackAuburn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF141F3D457BB2E858FE07C /* Pods_BlackAuburn.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		29BC8402204656F400C27D80 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		29CEF4D92056EFE100228744 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		29F6B4692045B76E004CBC06 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		29FED41E205EE9FB00F3CF9F /* OrgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgVC.swift; sourceTree = "<group>"; };
+		29FED420205EEA1700F3CF9F /* OrgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgTableViewCell.swift; sourceTree = "<group>"; };
 		4EF141F3D457BB2E858FE07C /* Pods_BlackAuburn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackAuburn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11608D88FF27B553DD3777F /* Pods-BlackAuburn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackAuburn.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlackAuburn/Pods-BlackAuburn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,8 +146,9 @@
 				29FED41A205EBEE200F3CF9F /* Home */,
 				29CEF4D62056EFBD00228744 /* Calendar */,
 				29016A6C205E1D8C001BBE2F /* Directory */,
-				2999B5FF204220EB00D4AB8C /* Main.storyboard */,
+				29FED41D205EE9A200F3CF9F /* Organizations */,
 				2999B602204220EB00D4AB8C /* Assets.xcassets */,
+				2999B5FF204220EB00D4AB8C /* Main.storyboard */,
 				2999B604204220EB00D4AB8C /* LaunchScreen.storyboard */,
 				2999B607204220EB00D4AB8C /* Info.plist */,
 			);
@@ -200,6 +205,15 @@
 				295F1383205254FB00C04DED /* DrawerMenu.swift */,
 			);
 			path = Drawer;
+			sourceTree = "<group>";
+		};
+		29FED41D205EE9A200F3CF9F /* Organizations */ = {
+			isa = PBXGroup;
+			children = (
+				29FED41E205EE9FB00F3CF9F /* OrgVC.swift */,
+				29FED420205EEA1700F3CF9F /* OrgTableViewCell.swift */,
+			);
+			path = Organizations;
 			sourceTree = "<group>";
 		};
 		F2F621BF771E8AEABC3883C3 /* Frameworks */ = {
@@ -438,7 +452,9 @@
 				29016A73205E224E001BBE2F /* DirectoryVC.swift in Sources */,
 				2999B5FE204220EB00D4AB8C /* LoginVC.swift in Sources */,
 				29016A75205E22AC001BBE2F /* DirectoryTableViewCell.swift in Sources */,
+				29FED41F205EE9FB00F3CF9F /* OrgVC.swift in Sources */,
 				295F1384205254FB00C04DED /* DrawerMenu.swift in Sources */,
+				29FED421205EEA1700F3CF9F /* OrgTableViewCell.swift in Sources */,
 				29CEF4DA2056EFE100228744 /* CalendarVC.swift in Sources */,
 				2999B5FC204220EB00D4AB8C /* AppDelegate.swift in Sources */,
 				29F6B46A2045B76E004CBC06 /* HomeCollectionViewCell.swift in Sources */,

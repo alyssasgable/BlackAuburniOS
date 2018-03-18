@@ -1,19 +1,19 @@
 //
-//  DirectoryCellTableViewCell.swift
+//  OrgTableViewCell.swift
 //  BlackAuburn
 //
-//  Created by ALYSSA on 3/17/18.
+//  Created by ALYSSA on 3/18/18.
 //  Copyright © 2018 AlyssaGable. All rights reserved.
 //
 
 import UIKit
 import SnapKit
 
-class DirectoryTableViewCell: UITableViewCell {
+class OrgTableViewCell: UITableViewCell {
     
-    let student: UILabel = {
+    let organization: UILabel = {
         $0.textColor = UIColor.black
-        $0.font = UIFont.boldSystemFont(ofSize: 16.0)
+        $0.font = UIFont.boldSystemFont(ofSize: 36.0)
         $0.textAlignment = .left
         $0.numberOfLines = 0
         $0.lineBreakMode = .byWordWrapping
@@ -21,17 +21,17 @@ class DirectoryTableViewCell: UITableViewCell {
         return $0
     }(UILabel())
     
-    let major: UILabel = {
+    let caption: UILabel = {
         $0.textColor = UIColor.black
-        $0.font = UIFont.italicSystemFont(ofSize: 12.0)
-        $0.textAlignment = .left
+        $0.font = UIFont.italicSystemFont(ofSize: 22.0)
+        $0.textAlignment = .center
         $0.numberOfLines = 0
         $0.lineBreakMode = .byWordWrapping
         return $0
     }(UILabel())
     
     
-    let studentImage: UIImageView = {
+    let orgImage: UIImageView = {
         $0.clipsToBounds = true
         return $0
     }(UIImageView())
@@ -41,13 +41,11 @@ class DirectoryTableViewCell: UITableViewCell {
         
         let superview = self.contentView
         
-        superview.addSubview(student)
-        superview.addSubview(major)
+        organization.center = superview.center
+        superview.addSubview(organization)
         
-//        studentImage.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        
-        studentImage.layer.cornerRadius = studentImage.bounds.width / 2
-        superview.addSubview(studentImage)
+        superview.addSubview(caption)
+        superview.addSubview(orgImage)
         
         setupCell()
     }
@@ -60,24 +58,25 @@ class DirectoryTableViewCell: UITableViewCell {
     
     func setupCell() {
         
-        studentImage.snp.remakeConstraints { (make) in
+        orgImage.snp.remakeConstraints { (make) in
             make.top.equalToSuperview().offset(10)
-            make.height.width.equalTo(50)
+            make.height.width.equalTo(300)
+            make.right.equalToSuperview().inset(20)
             make.left.equalToSuperview().offset(20)
         }
         
-        student.snp.remakeConstraints { (make) in
-            make.left.equalTo(studentImage.snp.right).offset(15)
-            make.top.equalTo(studentImage.snp.top).offset(5)
+        organization.snp.remakeConstraints { (make) in
+            make.top.equalTo(orgImage.snp.bottom).offset(5)
+            make.left.equalToSuperview().offset(80 )
+            make.right.equalToSuperview()
         }
         
-        major.snp.remakeConstraints { (make) in
-            make.top.equalTo(student.snp.bottom).offset(5)
-            make.left.equalTo(student)
+        caption.snp.remakeConstraints { (make) in
+            make.top.equalTo(organization.snp.bottom).offset(5)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(100)
         }
         
         
-    }
-    
 }
-
+}
