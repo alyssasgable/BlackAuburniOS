@@ -90,30 +90,33 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         let drawerBtn: UIButton = UIButton(type: UIButtonType.custom)
         drawerBtn.setImage(drawerImage, for: .normal)
-        let drawerButton = UIBarButtonItem(customView: drawerBtn)
-        self.navigationItem.rightBarButtonItem = drawerButton
+//        let drawerButton = UIBarButtonItem(customView: drawerBtn)
+        self.navigationController?.navigationBar.addSubview(drawerBtn)
+        
+        drawerBtn.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(5)
+            make.right.equalToSuperview()
+            make.height.width.equalTo(40)
+        }
         drawerBtn.addTarget(self, action: #selector(showDrawer), for: .touchUpInside)
         
-//        let homeButton: UIButton = UIButton(type: UIButtonType.custom)
-//        homeButton.setImage(UIImage(named: "logo"), for: .normal)
-//        //        button.addTarget(self, action: #selector(nil), for: .touchUpInside)
+        let homeButton: UIButton = UIButton(type: UIButtonType.custom)
+        homeButton.setImage(UIImage(named: "logo"), for: .normal)
+        homeButton.addTarget(self, action: #selector(goToHome), for: .touchUpInside)
+
+        self.navigationController?.navigationBar.addSubview(homeButton)
+
 //        homeButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-//
-//        let logoButton = UIBarButtonItem(customView: homeButton)
-//        //assign button to navigationbar
-//        self.navigationItem.leftBarButtonItem = logoButton
-        
-        let leftButton = UIButton(frame:CGRect(x: 0, y: 0, width: 40, height: 40))
-        let background = UIImageView(image: UIImage(named: "logo"))
-        background.frame = CGRect(x: 0, y: 0, width: 40, height: 35)
-        leftButton.addSubview(background)
-        self.navigationController?.navigationBar.addSubview(leftButton)
-        
-        leftButton.snp.makeConstraints { (make) in
-            make.top.equalToSuperview()
-            make.left.equalToSuperview().offset(15)
-            make.height.equalTo(50)
+
+        homeButton.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(5)
+            make.left.equalToSuperview().offset(10)
+            make.height.equalTo(35)
+            make.width.equalTo(40)
         }
+      
+        
+
     }
     func setUpView() {
         collectionView.backgroundColor = UIColor.clear
@@ -139,6 +142,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @objc func showDrawer() {
         present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
 
+    }
+    
+    @objc func goToHome() {
+        self.navigationController?.pushViewController(HomeVC(), animated: true)
     }
     
     

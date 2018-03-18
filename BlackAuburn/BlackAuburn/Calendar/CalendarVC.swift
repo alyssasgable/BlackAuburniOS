@@ -44,6 +44,7 @@ class CalendarVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         self.view.backgroundColor = UIColor.white
         calendar.dataSource = self
         calendar.delegate = self
